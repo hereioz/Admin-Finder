@@ -17,7 +17,7 @@ def clear():
 
 def OS_check():
     if (platform.system().lower() != "linux"):
-        print("Only Linux OS!")
+        print("Only Linux OS Supported!")
         time.sleep(0.50)
         exit(0)
 

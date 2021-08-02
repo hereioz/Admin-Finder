@@ -1,5 +1,4 @@
 enquiries
 colorama
 requests
-platform
 threading

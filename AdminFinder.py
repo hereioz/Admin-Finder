@@ -109,11 +109,19 @@ def main():
 
     time.sleep(3)
 
+    if (site.endswith('/')):
+        pass
+    else:
+        site = site+"/"
+
     for i in range(len(path)):
         if (path[i].startswith('/')):
-            url = site+path[i].strip()
+            pathh = path[i].replace('/','')
+            url = site+pathh.strip()
         else:
-            url = site+"/"+path[i].strip()
+            pathh = path[i]
+            url = site+pathh.strip()
+
         time.sleep(sleep)
         threading.Thread(target=searcher,args=(url,i,file_save)).start()
 
